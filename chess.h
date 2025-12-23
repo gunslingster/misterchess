@@ -1,24 +1,21 @@
+#include <stdio.h>
+
 typedef enum
 {
     EMPTY,
-    PAWN,
-    KNIGHT,
-    BISHOP,
-    ROOK,
-    QUEEN,
-    KING
+    WHITE_PAWN,
+    WHITE_KNIGHT,
+    WHITE_BISHOP,
+    WHITE_ROOK,
+    WHITE_QUEEN,
+    WHITE_KING,
+    BLACK_PAWN,
+    BLACK_KNIGHT,
+    BLACK_BISHOP,
+    BLACK_ROOK,
+    BLACK_QUEEN,
+    BLACK_KING,
 } PIECE_TYPE;
 
-typedef enum
-{
-    BLACK,
-    WHITE
-} PIECE_COLOR;
-
-typedef struct
-{
-    PIECE_TYPE type;
-    PIECE_COLOR color;
-} PIECE;
-
 void init_board();
+void render_board(PIECE_TYPE board[8][8]);
