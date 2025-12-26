@@ -1,3 +1,6 @@
+#ifndef CHESS_H
+#define CHESS_H
+
 #include <stdio.h>
 
 typedef enum
@@ -18,4 +21,5 @@ typedef enum
 } PIECE_TYPE;
 
 void init_board();
-void render_board(PIECE_TYPE board[8][8]);
+
+#endif // CHESS_H
