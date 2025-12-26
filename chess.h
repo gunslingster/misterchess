@@ -20,6 +20,13 @@ typedef enum
     BLACK_KING,
 } PIECE_TYPE;
 
+typedef struct
+{
+    int active;
+    int row, col;
+    PIECE_TYPE piece;
+} Selection;
+
 void init_board();
 
 #endif // CHESS_H

@@ -77,3 +77,19 @@ void view_render_board(SDL_Renderer *r, PIECE_TYPE board[8][8])
         }
     }
 }
+
+void view_render_selection(SDL_Renderer *r, Selection sel)
+{
+    if (!sel.active)
+        return;
+
+    SDL_Rect rect = {
+        sel.col * SQUARE_SIZE,
+        sel.row * SQUARE_SIZE,
+        SQUARE_SIZE,
+        SQUARE_SIZE};
+
+    SDL_SetRenderDrawBlendMode(r, SDL_BLENDMODE_BLEND);
+    SDL_SetRenderDrawColor(r, 0, 120, 255, 80);
+    SDL_RenderFillRect(r, &rect);
+}
